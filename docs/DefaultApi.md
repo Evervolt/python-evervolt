@@ -1,4 +1,4 @@
-# openapi_client.DefaultApi
+# evervolt.DefaultApi
 
 All URIs are relative to *https://api.evervolt.beestree.nl*
 
@@ -19,21 +19,21 @@ Method | HTTP request | Description
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import evervolt
+from evervolt.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.evervolt.beestree.nl
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = evervolt.Configuration(
     host = "https://api.evervolt.beestree.nl"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = evervolt.DefaultApi(api_client)
 
     try:
         api_instance.devices_delete()
@@ -70,21 +70,21 @@ No authorization required
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import evervolt
+from evervolt.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.evervolt.beestree.nl
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = evervolt.Configuration(
     host = "https://api.evervolt.beestree.nl"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = evervolt.DefaultApi(api_client)
 
     try:
         api_instance.devices_get()
@@ -121,21 +121,21 @@ No authorization required
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import evervolt
+from evervolt.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.evervolt.beestree.nl
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = evervolt.Configuration(
     host = "https://api.evervolt.beestree.nl"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = evervolt.DefaultApi(api_client)
 
     try:
         api_instance.devices_post()
@@ -172,21 +172,21 @@ No authorization required
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import evervolt
+from evervolt.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.evervolt.beestree.nl
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = evervolt.Configuration(
     host = "https://api.evervolt.beestree.nl"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = evervolt.DefaultApi(api_client)
 
     try:
         api_instance.energy_prices_post()
@@ -223,21 +223,21 @@ No authorization required
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import evervolt
+from evervolt.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.evervolt.beestree.nl
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = evervolt.Configuration(
     host = "https://api.evervolt.beestree.nl"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = evervolt.DefaultApi(api_client)
 
     try:
         api_instance.energy_schedule_post()
@@ -274,21 +274,21 @@ No authorization required
 
 
 ```python
-import openapi_client
-from openapi_client.rest import ApiException
+import evervolt
+from evervolt.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to https://api.evervolt.beestree.nl
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = evervolt.Configuration(
     host = "https://api.evervolt.beestree.nl"
 )
 
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.DefaultApi(api_client)
+    api_instance = evervolt.DefaultApi(api_client)
 
     try:
         api_instance.energy_starttime_post()

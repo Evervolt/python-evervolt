@@ -1,5 +1,5 @@
 [project]
-name = "openapi_client"
+name = "evervolt"
 version = "1.0.0"
 description = "Evervolt"
 authors = [
@@ -40,7 +40,7 @@ extension-pkg-whitelist = "pydantic"
 
 [tool.mypy]
 files = [
-  "openapi_client",
+  "evervolt",
   #"test",  # auto-generated tests
   "tests", # hand-written tests
 ]
@@ -78,7 +78,7 @@ disallow_any_generics = true
 
 [[tool.mypy.overrides]]
 module = [
-  "openapi_client.configuration",
+  "evervolt.configuration",
 ]
 warn_unused_ignores = true
 strict_equality = true
