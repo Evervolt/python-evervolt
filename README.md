@@ -61,17 +61,29 @@ configuration = evervolt.Configuration(
     host = "https://api.evervolt.beestree.nl"
 )
 
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = os.environ["API_KEY"]
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 
 # Enter a context with an instance of the API client
 with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = evervolt.DefaultApi(api_client)
+    api_instance = evervolt.DevicesApi(api_client)
+    devices_delete_request = evervolt.DevicesDeleteRequest() # DevicesDeleteRequest |  (optional)
 
     try:
-        api_instance.devices_delete()
+        # Delete device
+        api_instance.devices_delete(devices_delete_request=devices_delete_request)
     except ApiException as e:
-        print("Exception when calling DefaultApi->devices_delete: %s\n" % e)
+        print("Exception when calling DevicesApi->devices_delete: %s\n" % e)
 
 ```
 
@@ -81,16 +93,28 @@ All URIs are relative to *https://api.evervolt.beestree.nl*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*DefaultApi* | [**devices_delete**](docs/DefaultApi.md#devices_delete) | **DELETE** /devices | 
-*DefaultApi* | [**devices_get**](docs/DefaultApi.md#devices_get) | **GET** /devices | 
-*DefaultApi* | [**devices_post**](docs/DefaultApi.md#devices_post) | **POST** /devices | 
-*DefaultApi* | [**energy_prices_post**](docs/DefaultApi.md#energy_prices_post) | **POST** /energy/prices | 
-*DefaultApi* | [**energy_schedule_post**](docs/DefaultApi.md#energy_schedule_post) | **POST** /energy/schedule | 
-*DefaultApi* | [**energy_starttime_post**](docs/DefaultApi.md#energy_starttime_post) | **POST** /energy/starttime | 
+*DevicesApi* | [**devices_delete**](docs/DevicesApi.md#devices_delete) | **DELETE** /devices | Delete device
+*DevicesApi* | [**devices_get**](docs/DevicesApi.md#devices_get) | **GET** /devices | Get devices
+*DevicesApi* | [**devices_post**](docs/DevicesApi.md#devices_post) | **POST** /devices | Add device
+*PricesApi* | [**energy_prices_post**](docs/PricesApi.md#energy_prices_post) | **POST** /energy/prices | Electricity prices
+*PricesApi* | [**energy_schedule_post**](docs/PricesApi.md#energy_schedule_post) | **POST** /energy/schedule | Optimal schedule
+*PricesApi* | [**energy_starttime_post**](docs/PricesApi.md#energy_starttime_post) | **POST** /energy/starttime | Optimal start time
 
 
 ## Documentation For Models
 
+ - [DevicesDeleteRequest](docs/DevicesDeleteRequest.md)
+ - [DevicesPostRequest](docs/DevicesPostRequest.md)
+ - [EnergyPricesPostRequest](docs/EnergyPricesPostRequest.md)
+ - [EnergySchedulePostRequest](docs/EnergySchedulePostRequest.md)
+ - [EnergySchedulePostRequestSplittableUsage](docs/EnergySchedulePostRequestSplittableUsage.md)
+ - [EnergyStarttimePostRequest](docs/EnergyStarttimePostRequest.md)
+ - [InlineObject](docs/InlineObject.md)
+ - [InlineObject1](docs/InlineObject1.md)
+ - [InlineObjectInner](docs/InlineObjectInner.md)
+ - [Providers](docs/Providers.md)
+ - [ScheduleSlot](docs/ScheduleSlot.md)
+ - [UsageProfileInner](docs/UsageProfileInner.md)
 
 
 <a id="documentation-for-authorization"></a>

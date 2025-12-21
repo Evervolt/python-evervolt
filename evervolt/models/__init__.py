@@ -13,4 +13,16 @@
 """  # noqa: E501
 
 # import models into model package
+from evervolt.models.devices_delete_request import DevicesDeleteRequest
+from evervolt.models.devices_post_request import DevicesPostRequest
+from evervolt.models.energy_prices_post_request import EnergyPricesPostRequest
+from evervolt.models.energy_schedule_post_request import EnergySchedulePostRequest
+from evervolt.models.energy_schedule_post_request_splittable_usage import EnergySchedulePostRequestSplittableUsage
+from evervolt.models.energy_starttime_post_request import EnergyStarttimePostRequest
+from evervolt.models.inline_object import InlineObject
+from evervolt.models.inline_object1 import InlineObject1
+from evervolt.models.inline_object_inner import InlineObjectInner
+from evervolt.models.providers import Providers
+from evervolt.models.schedule_slot import ScheduleSlot
+from evervolt.models.usage_profile_inner import UsageProfileInner
 
