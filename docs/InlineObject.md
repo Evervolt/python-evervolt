@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **api_usage** | **float** | Number of API calls made by the customer | [optional] 
 **devices_limit** | **float** | Maximum number of devices the customer can configure | [optional] 
 **api_usage_limit** | **float** | Maximum number of API calls the customer can make | [optional] 
+**email** | **str** |  | [optional] 
 
 ## Example
 

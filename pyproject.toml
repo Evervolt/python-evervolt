@@ -1,6 +1,6 @@
 [project]
 name = "evervolt"
-version = "1.0.3"
+version = "1.0.4"
 description = "Evervolt"
 authors = [
   {name = "OpenAPI Generator Community",email = "team@openapitools.org"},

@@ -17,7 +17,7 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt
+from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing import Optional, Set
 from typing_extensions import Self
@@ -31,7 +31,8 @@ class InlineObject(BaseModel):
     api_usage: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Number of API calls made by the customer", alias="apiUsage")
     devices_limit: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Maximum number of devices the customer can configure", alias="devicesLimit")
     api_usage_limit: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Maximum number of API calls the customer can make", alias="apiUsageLimit")
-    __properties: ClassVar[List[str]] = ["isSubscribed", "devices", "apiUsage", "devicesLimit", "apiUsageLimit"]
+    email: Optional[StrictStr] = None
+    __properties: ClassVar[List[str]] = ["isSubscribed", "devices", "apiUsage", "devicesLimit", "apiUsageLimit", "email"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -88,7 +89,8 @@ class InlineObject(BaseModel):
             "devices": obj.get("devices"),
             "apiUsage": obj.get("apiUsage"),
             "devicesLimit": obj.get("devicesLimit"),
-            "apiUsageLimit": obj.get("apiUsageLimit")
+            "apiUsageLimit": obj.get("apiUsageLimit"),
+            "email": obj.get("email")
         })
         return _obj
 

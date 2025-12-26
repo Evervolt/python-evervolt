@@ -212,7 +212,7 @@ conf = evervolt.Configuration(
     ) -> None:
         """Constructor
         """
-        self._base_path = "https://api.evervolt.beestree.nl" if host is None else host
+        self._base_path = "https://api.evervolt.nl" if host is None else host
         """Default Base url
         """
         self.server_index = 0 if server_index is None and host is None else server_index
@@ -531,7 +531,7 @@ conf = evervolt.Configuration(
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: 1.0.0\n"\
-               "SDK Package Version: 1.0.3".\
+               "SDK Package Version: 1.0.4".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self) -> List[HostSetting]:
@@ -541,7 +541,11 @@ conf = evervolt.Configuration(
         """
         return [
             {
-                'url': "https://api.evervolt.beestree.nl",
+                'url': "https://api.evervolt.nl",
+                'description': "No description provided",
+            },
+            {
+                'url': "http://localhost:8080",
                 'description': "No description provided",
             }
         ]

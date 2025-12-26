@@ -1,6 +1,6 @@
 # evervolt.CustomerApi
 
-All URIs are relative to *https://api.evervolt.beestree.nl*
+All URIs are relative to *https://api.evervolt.nl*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -24,10 +24,10 @@ from evervolt.models.inline_object import InlineObject
 from evervolt.rest import ApiException
 from pprint import pprint
 
-# Defining the host is optional and defaults to https://api.evervolt.beestree.nl
+# Defining the host is optional and defaults to https://api.evervolt.nl
 # See configuration.py for a list of all supported configuration parameters.
 configuration = evervolt.Configuration(
-    host = "https://api.evervolt.beestree.nl"
+    host = "https://api.evervolt.nl"
 )
 
 # The client must configure the authentication and authorization parameters
