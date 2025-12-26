@@ -20,7 +20,7 @@ from typing import List, Optional
 from evervolt.models.energy_prices_post_request import EnergyPricesPostRequest
 from evervolt.models.energy_schedule_post_request import EnergySchedulePostRequest
 from evervolt.models.energy_starttime_post_request import EnergyStarttimePostRequest
-from evervolt.models.inline_object1 import InlineObject1
+from evervolt.models.inline_object2 import InlineObject2
 from evervolt.models.schedule_slot import ScheduleSlot
 
 from evervolt.api_client import ApiClient, RequestSerialized
@@ -96,7 +96,7 @@ class PricesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[ScheduleSlot]",
-            '404': "InlineObject",
+            '404': "InlineObject1",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -164,7 +164,7 @@ class PricesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[ScheduleSlot]",
-            '404': "InlineObject",
+            '404': "InlineObject1",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -232,7 +232,7 @@ class PricesApi:
 
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[ScheduleSlot]",
-            '404': "InlineObject",
+            '404': "InlineObject1",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -608,7 +608,7 @@ class PricesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> InlineObject1:
+    ) -> InlineObject2:
         """Optimal start time
 
         This endpoint is used to calculate the optimal start time for a device based on its usage pattern
@@ -646,7 +646,7 @@ class PricesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "InlineObject1",
+            '200': "InlineObject2",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -675,7 +675,7 @@ class PricesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[InlineObject1]:
+    ) -> ApiResponse[InlineObject2]:
         """Optimal start time
 
         This endpoint is used to calculate the optimal start time for a device based on its usage pattern
@@ -713,7 +713,7 @@ class PricesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "InlineObject1",
+            '200': "InlineObject2",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -780,7 +780,7 @@ class PricesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "InlineObject1",
+            '200': "InlineObject2",
         }
         response_data = self.api_client.call_api(
             *_param,

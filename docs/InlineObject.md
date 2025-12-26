@@ -5,10 +5,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**error** | **str** |  | [optional] 
-**trace_id** | **str** |  | [optional] 
-**message** | **str** |  | [optional] 
-**details** | **object** |  | [optional] 
+**is_subscribed** | **bool** |  | [optional] 
+**devices** | **float** | Number of devices the customer has configured | [optional] 
+**api_usage** | **float** | Number of API calls made by the customer | [optional] 
+**devices_limit** | **float** | Maximum number of devices the customer can configure | [optional] 
+**api_usage_limit** | **float** | Maximum number of API calls the customer can make | [optional] 
 
 ## Example
 

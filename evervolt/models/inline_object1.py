@@ -17,9 +17,8 @@ import pprint
 import re  # noqa: F401
 import json
 
-from datetime import datetime
-from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt
-from typing import Any, ClassVar, Dict, List, Optional, Union
+from pydantic import BaseModel, ConfigDict, Field, StrictStr, field_validator
+from typing import Any, ClassVar, Dict, List, Optional
 from typing import Optional, Set
 from typing_extensions import Self
 
@@ -27,10 +26,21 @@ class InlineObject1(BaseModel):
     """
     InlineObject1
     """ # noqa: E501
-    start: Optional[datetime] = Field(default=None, description="Recommended optimal start time")
-    cost: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Cost if the device is started at the resulting time")
-    cost_now: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Cost if the device would be started now", alias="costNow")
-    __properties: ClassVar[List[str]] = ["start", "cost", "costNow"]
+    error: Optional[StrictStr] = None
+    trace_id: Optional[StrictStr] = Field(default=None, alias="traceId")
+    message: Optional[StrictStr] = None
+    details: Optional[Dict[str, Any]] = None
+    __properties: ClassVar[List[str]] = ["error", "traceId", "message", "details"]
+
+    @field_validator('error')
+    def error_validate_enum(cls, value):
+        """Validates the enum"""
+        if value is None:
+            return value
+
+        if value not in set(['ProviderNotFoundException', 'TermNotAvailableException']):
+            raise ValueError("must be one of enum values ('ProviderNotFoundException', 'TermNotAvailableException')")
+        return value
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -83,9 +93,10 @@ class InlineObject1(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "start": obj.get("start"),
-            "cost": obj.get("cost"),
-            "costNow": obj.get("costNow")
+            "error": obj.get("error"),
+            "traceId": obj.get("traceId"),
+            "message": obj.get("message"),
+            "details": obj.get("details")
         })
         return _obj
 

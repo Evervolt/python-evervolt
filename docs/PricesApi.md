@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **energy_starttime_post**
-> InlineObject1 energy_starttime_post(energy_starttime_post_request=energy_starttime_post_request)
+> InlineObject2 energy_starttime_post(energy_starttime_post_request=energy_starttime_post_request)
 
 Optimal start time
 
@@ -184,7 +184,7 @@ This endpoint is used to calculate the optimal start time for a device based on 
 ```python
 import evervolt
 from evervolt.models.energy_starttime_post_request import EnergyStarttimePostRequest
-from evervolt.models.inline_object1 import InlineObject1
+from evervolt.models.inline_object2 import InlineObject2
 from evervolt.rest import ApiException
 from pprint import pprint
 
@@ -231,7 +231,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineObject1**](InlineObject1.md)
+[**InlineObject2**](InlineObject2.md)
 
 ### Authorization
 

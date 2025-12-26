@@ -14,10 +14,11 @@
 """  # noqa: E501
 
 
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 
 # Define package exports
 __all__ = [
+    "CustomerApi",
     "DevicesApi",
     "PricesApi",
     "ApiResponse",
@@ -37,13 +38,15 @@ __all__ = [
     "EnergyStarttimePostRequest",
     "InlineObject",
     "InlineObject1",
-    "InlineObjectInner",
+    "InlineObject1Inner",
+    "InlineObject2",
     "Providers",
     "ScheduleSlot",
     "UsageProfileInner",
 ]
 
 # import apis into sdk package
+from evervolt.api.customer_api import CustomerApi as CustomerApi
 from evervolt.api.devices_api import DevicesApi as DevicesApi
 from evervolt.api.prices_api import PricesApi as PricesApi
 
@@ -67,7 +70,8 @@ from evervolt.models.energy_schedule_post_request_splittable_usage import Energy
 from evervolt.models.energy_starttime_post_request import EnergyStarttimePostRequest as EnergyStarttimePostRequest
 from evervolt.models.inline_object import InlineObject as InlineObject
 from evervolt.models.inline_object1 import InlineObject1 as InlineObject1
-from evervolt.models.inline_object_inner import InlineObjectInner as InlineObjectInner
+from evervolt.models.inline_object1_inner import InlineObject1Inner as InlineObject1Inner
+from evervolt.models.inline_object2 import InlineObject2 as InlineObject2
 from evervolt.models.providers import Providers as Providers
 from evervolt.models.schedule_slot import ScheduleSlot as ScheduleSlot
 from evervolt.models.usage_profile_inner import UsageProfileInner as UsageProfileInner

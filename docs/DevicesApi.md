@@ -87,7 +87,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **devices_get**
-> List[InlineObjectInner] devices_get()
+> List[InlineObject1Inner] devices_get()
 
 Get devices
 
@@ -99,7 +99,7 @@ This endpoint is used to get all devices
 
 ```python
 import evervolt
-from evervolt.models.inline_object_inner import InlineObjectInner
+from evervolt.models.inline_object1_inner import InlineObject1Inner
 from evervolt.rest import ApiException
 from pprint import pprint
 
@@ -142,7 +142,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**List[InlineObjectInner]**](InlineObjectInner.md)
+[**List[InlineObject1Inner]**](InlineObject1Inner.md)
 
 ### Authorization
 

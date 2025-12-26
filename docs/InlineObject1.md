@@ -5,9 +5,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**start** | **datetime** | Recommended optimal start time | [optional] 
-**cost** | **float** | Cost if the device is started at the resulting time | [optional] 
-**cost_now** | **float** | Cost if the device would be started now | [optional] 
+**error** | **str** |  | [optional] 
+**trace_id** | **str** |  | [optional] 
+**message** | **str** |  | [optional] 
+**details** | **object** |  | [optional] 
 
 ## Example
 

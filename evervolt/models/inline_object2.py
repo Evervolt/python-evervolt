@@ -17,21 +17,20 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt
+from datetime import datetime
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
 from typing import Optional, Set
 from typing_extensions import Self
 
-class InlineObject(BaseModel):
+class InlineObject2(BaseModel):
     """
-    InlineObject
+    InlineObject2
     """ # noqa: E501
-    is_subscribed: Optional[StrictBool] = Field(default=None, alias="isSubscribed")
-    devices: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Number of devices the customer has configured")
-    api_usage: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Number of API calls made by the customer", alias="apiUsage")
-    devices_limit: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Maximum number of devices the customer can configure", alias="devicesLimit")
-    api_usage_limit: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Maximum number of API calls the customer can make", alias="apiUsageLimit")
-    __properties: ClassVar[List[str]] = ["isSubscribed", "devices", "apiUsage", "devicesLimit", "apiUsageLimit"]
+    start: Optional[datetime] = Field(default=None, description="Recommended optimal start time")
+    cost: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Cost if the device is started at the resulting time")
+    cost_now: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Cost if the device would be started now", alias="costNow")
+    __properties: ClassVar[List[str]] = ["start", "cost", "costNow"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -51,7 +50,7 @@ class InlineObject(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of InlineObject from a JSON string"""
+        """Create an instance of InlineObject2 from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -76,7 +75,7 @@ class InlineObject(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of InlineObject from a dict"""
+        """Create an instance of InlineObject2 from a dict"""
         if obj is None:
             return None
 
@@ -84,11 +83,9 @@ class InlineObject(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "isSubscribed": obj.get("isSubscribed"),
-            "devices": obj.get("devices"),
-            "apiUsage": obj.get("apiUsage"),
-            "devicesLimit": obj.get("devicesLimit"),
-            "apiUsageLimit": obj.get("apiUsageLimit")
+            "start": obj.get("start"),
+            "cost": obj.get("cost"),
+            "costNow": obj.get("costNow")
         })
         return _obj
 

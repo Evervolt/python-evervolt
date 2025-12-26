@@ -3,6 +3,7 @@
 .gitlab-ci.yml
 .travis.yml
 README.md
+docs/CustomerApi.md
 docs/DevicesApi.md
 docs/DevicesDeleteRequest.md
 docs/DevicesPostRequest.md
@@ -12,13 +13,15 @@ docs/EnergySchedulePostRequestSplittableUsage.md
 docs/EnergyStarttimePostRequest.md
 docs/InlineObject.md
 docs/InlineObject1.md
-docs/InlineObjectInner.md
+docs/InlineObject1Inner.md
+docs/InlineObject2.md
 docs/PricesApi.md
 docs/Providers.md
 docs/ScheduleSlot.md
 docs/UsageProfileInner.md
 evervolt/__init__.py
 evervolt/api/__init__.py
+evervolt/api/customer_api.py
 evervolt/api/devices_api.py
 evervolt/api/prices_api.py
 evervolt/api_client.py
@@ -34,7 +37,8 @@ evervolt/models/energy_schedule_post_request_splittable_usage.py
 evervolt/models/energy_starttime_post_request.py
 evervolt/models/inline_object.py
 evervolt/models/inline_object1.py
-evervolt/models/inline_object_inner.py
+evervolt/models/inline_object1_inner.py
+evervolt/models/inline_object2.py
 evervolt/models/providers.py
 evervolt/models/schedule_slot.py
 evervolt/models/usage_profile_inner.py

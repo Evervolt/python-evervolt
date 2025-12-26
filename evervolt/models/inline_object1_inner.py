@@ -17,21 +17,20 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictBool, StrictFloat, StrictInt
-from typing import Any, ClassVar, Dict, List, Optional, Union
+from pydantic import BaseModel, ConfigDict, Field, StrictStr
+from typing import Any, ClassVar, Dict, List, Optional
+from evervolt.models.usage_profile_inner import UsageProfileInner
 from typing import Optional, Set
 from typing_extensions import Self
 
-class InlineObject(BaseModel):
+class InlineObject1Inner(BaseModel):
     """
-    InlineObject
+    InlineObject1Inner
     """ # noqa: E501
-    is_subscribed: Optional[StrictBool] = Field(default=None, alias="isSubscribed")
-    devices: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Number of devices the customer has configured")
-    api_usage: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Number of API calls made by the customer", alias="apiUsage")
-    devices_limit: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Maximum number of devices the customer can configure", alias="devicesLimit")
-    api_usage_limit: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, description="Maximum number of API calls the customer can make", alias="apiUsageLimit")
-    __properties: ClassVar[List[str]] = ["isSubscribed", "devices", "apiUsage", "devicesLimit", "apiUsageLimit"]
+    id: Optional[StrictStr] = None
+    name: Optional[StrictStr] = None
+    usage_profile: Optional[List[UsageProfileInner]] = Field(default=None, alias="usageProfile")
+    __properties: ClassVar[List[str]] = ["id", "name", "usageProfile"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -51,7 +50,7 @@ class InlineObject(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of InlineObject from a JSON string"""
+        """Create an instance of InlineObject1Inner from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -72,11 +71,18 @@ class InlineObject(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each item in usage_profile (list)
+        _items = []
+        if self.usage_profile:
+            for _item_usage_profile in self.usage_profile:
+                if _item_usage_profile:
+                    _items.append(_item_usage_profile.to_dict())
+            _dict['usageProfile'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of InlineObject from a dict"""
+        """Create an instance of InlineObject1Inner from a dict"""
         if obj is None:
             return None
 
@@ -84,11 +90,9 @@ class InlineObject(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "isSubscribed": obj.get("isSubscribed"),
-            "devices": obj.get("devices"),
-            "apiUsage": obj.get("apiUsage"),
-            "devicesLimit": obj.get("devicesLimit"),
-            "apiUsageLimit": obj.get("apiUsageLimit")
+            "id": obj.get("id"),
+            "name": obj.get("name"),
+            "usageProfile": [UsageProfileInner.from_dict(_item) for _item in obj["usageProfile"]] if obj.get("usageProfile") is not None else None
         })
         return _obj
 

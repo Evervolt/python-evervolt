@@ -21,7 +21,8 @@ from evervolt.models.energy_schedule_post_request_splittable_usage import Energy
 from evervolt.models.energy_starttime_post_request import EnergyStarttimePostRequest
 from evervolt.models.inline_object import InlineObject
 from evervolt.models.inline_object1 import InlineObject1
-from evervolt.models.inline_object_inner import InlineObjectInner
+from evervolt.models.inline_object1_inner import InlineObject1Inner
+from evervolt.models.inline_object2 import InlineObject2
 from evervolt.models.providers import Providers
 from evervolt.models.schedule_slot import ScheduleSlot
 from evervolt.models.usage_profile_inner import UsageProfileInner

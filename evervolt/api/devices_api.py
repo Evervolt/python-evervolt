@@ -19,7 +19,7 @@ from typing_extensions import Annotated
 from typing import List, Optional
 from evervolt.models.devices_delete_request import DevicesDeleteRequest
 from evervolt.models.devices_post_request import DevicesPostRequest
-from evervolt.models.inline_object_inner import InlineObjectInner
+from evervolt.models.inline_object1_inner import InlineObject1Inner
 
 from evervolt.api_client import ApiClient, RequestSerialized
 from evervolt.api_response import ApiResponse
@@ -321,7 +321,7 @@ class DevicesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> List[InlineObjectInner]:
+    ) -> List[InlineObject1Inner]:
         """Get devices
 
         This endpoint is used to get all devices
@@ -356,7 +356,7 @@ class DevicesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[InlineObjectInner]",
+            '200': "List[InlineObject1Inner]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -384,7 +384,7 @@ class DevicesApi:
         _content_type: Optional[StrictStr] = None,
         _headers: Optional[Dict[StrictStr, Any]] = None,
         _host_index: Annotated[StrictInt, Field(ge=0, le=0)] = 0,
-    ) -> ApiResponse[List[InlineObjectInner]]:
+    ) -> ApiResponse[List[InlineObject1Inner]]:
         """Get devices
 
         This endpoint is used to get all devices
@@ -419,7 +419,7 @@ class DevicesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[InlineObjectInner]",
+            '200': "List[InlineObject1Inner]",
         }
         response_data = self.api_client.call_api(
             *_param,
@@ -482,7 +482,7 @@ class DevicesApi:
         )
 
         _response_types_map: Dict[str, Optional[str]] = {
-            '200': "List[InlineObjectInner]",
+            '200': "List[InlineObject1Inner]",
         }
         response_data = self.api_client.call_api(
             *_param,
