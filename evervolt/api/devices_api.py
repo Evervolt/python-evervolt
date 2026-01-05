@@ -40,7 +40,7 @@ class DevicesApi:
 
 
     @validate_call
-    async def devices_delete(
+    def devices_delete(
         self,
         devices_delete_request: Optional[DevicesDeleteRequest] = None,
         _request_timeout: Union[
@@ -95,11 +95,11 @@ class DevicesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -107,7 +107,7 @@ class DevicesApi:
 
 
     @validate_call
-    async def devices_delete_with_http_info(
+    def devices_delete_with_http_info(
         self,
         devices_delete_request: Optional[DevicesDeleteRequest] = None,
         _request_timeout: Union[
@@ -162,11 +162,11 @@ class DevicesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -174,7 +174,7 @@ class DevicesApi:
 
 
     @validate_call
-    async def devices_delete_without_preload_content(
+    def devices_delete_without_preload_content(
         self,
         devices_delete_request: Optional[DevicesDeleteRequest] = None,
         _request_timeout: Union[
@@ -229,7 +229,7 @@ class DevicesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -307,7 +307,7 @@ class DevicesApi:
 
 
     @validate_call
-    async def devices_get(
+    def devices_get(
         self,
         _request_timeout: Union[
             None,
@@ -358,11 +358,11 @@ class DevicesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[InlineObject1Inner]",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -370,7 +370,7 @@ class DevicesApi:
 
 
     @validate_call
-    async def devices_get_with_http_info(
+    def devices_get_with_http_info(
         self,
         _request_timeout: Union[
             None,
@@ -421,11 +421,11 @@ class DevicesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[InlineObject1Inner]",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -433,7 +433,7 @@ class DevicesApi:
 
 
     @validate_call
-    async def devices_get_without_preload_content(
+    def devices_get_without_preload_content(
         self,
         _request_timeout: Union[
             None,
@@ -484,7 +484,7 @@ class DevicesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[InlineObject1Inner]",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -553,7 +553,7 @@ class DevicesApi:
 
 
     @validate_call
-    async def devices_post(
+    def devices_post(
         self,
         devices_post_request: Optional[DevicesPostRequest] = None,
         _request_timeout: Union[
@@ -608,11 +608,11 @@ class DevicesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -620,7 +620,7 @@ class DevicesApi:
 
 
     @validate_call
-    async def devices_post_with_http_info(
+    def devices_post_with_http_info(
         self,
         devices_post_request: Optional[DevicesPostRequest] = None,
         _request_timeout: Union[
@@ -675,11 +675,11 @@ class DevicesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -687,7 +687,7 @@ class DevicesApi:
 
 
     @validate_call
-    async def devices_post_without_preload_content(
+    def devices_post_without_preload_content(
         self,
         devices_post_request: Optional[DevicesPostRequest] = None,
         _request_timeout: Union[
@@ -742,7 +742,7 @@ class DevicesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': None,
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

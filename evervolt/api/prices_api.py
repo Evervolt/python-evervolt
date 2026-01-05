@@ -42,7 +42,7 @@ class PricesApi:
 
 
     @validate_call
-    async def energy_prices_post(
+    def energy_prices_post(
         self,
         energy_prices_post_request: Optional[EnergyPricesPostRequest] = None,
         _request_timeout: Union[
@@ -98,11 +98,11 @@ class PricesApi:
             '200': "List[ScheduleSlot]",
             '404': "InlineObject1",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -110,7 +110,7 @@ class PricesApi:
 
 
     @validate_call
-    async def energy_prices_post_with_http_info(
+    def energy_prices_post_with_http_info(
         self,
         energy_prices_post_request: Optional[EnergyPricesPostRequest] = None,
         _request_timeout: Union[
@@ -166,11 +166,11 @@ class PricesApi:
             '200': "List[ScheduleSlot]",
             '404': "InlineObject1",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -178,7 +178,7 @@ class PricesApi:
 
 
     @validate_call
-    async def energy_prices_post_without_preload_content(
+    def energy_prices_post_without_preload_content(
         self,
         energy_prices_post_request: Optional[EnergyPricesPostRequest] = None,
         _request_timeout: Union[
@@ -234,7 +234,7 @@ class PricesApi:
             '200': "List[ScheduleSlot]",
             '404': "InlineObject1",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -319,7 +319,7 @@ class PricesApi:
 
 
     @validate_call
-    async def energy_schedule_post(
+    def energy_schedule_post(
         self,
         energy_schedule_post_request: Optional[EnergySchedulePostRequest] = None,
         _request_timeout: Union[
@@ -374,11 +374,11 @@ class PricesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[ScheduleSlot]",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -386,7 +386,7 @@ class PricesApi:
 
 
     @validate_call
-    async def energy_schedule_post_with_http_info(
+    def energy_schedule_post_with_http_info(
         self,
         energy_schedule_post_request: Optional[EnergySchedulePostRequest] = None,
         _request_timeout: Union[
@@ -441,11 +441,11 @@ class PricesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[ScheduleSlot]",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -453,7 +453,7 @@ class PricesApi:
 
 
     @validate_call
-    async def energy_schedule_post_without_preload_content(
+    def energy_schedule_post_without_preload_content(
         self,
         energy_schedule_post_request: Optional[EnergySchedulePostRequest] = None,
         _request_timeout: Union[
@@ -508,7 +508,7 @@ class PricesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "List[ScheduleSlot]",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
@@ -593,7 +593,7 @@ class PricesApi:
 
 
     @validate_call
-    async def energy_starttime_post(
+    def energy_starttime_post(
         self,
         energy_starttime_post_request: Optional[EnergyStarttimePostRequest] = None,
         _request_timeout: Union[
@@ -648,11 +648,11 @@ class PricesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InlineObject2",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -660,7 +660,7 @@ class PricesApi:
 
 
     @validate_call
-    async def energy_starttime_post_with_http_info(
+    def energy_starttime_post_with_http_info(
         self,
         energy_starttime_post_request: Optional[EnergyStarttimePostRequest] = None,
         _request_timeout: Union[
@@ -715,11 +715,11 @@ class PricesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InlineObject2",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )
-        await response_data.read()
+        response_data.read()
         return self.api_client.response_deserialize(
             response_data=response_data,
             response_types_map=_response_types_map,
@@ -727,7 +727,7 @@ class PricesApi:
 
 
     @validate_call
-    async def energy_starttime_post_without_preload_content(
+    def energy_starttime_post_without_preload_content(
         self,
         energy_starttime_post_request: Optional[EnergyStarttimePostRequest] = None,
         _request_timeout: Union[
@@ -782,7 +782,7 @@ class PricesApi:
         _response_types_map: Dict[str, Optional[str]] = {
             '200': "InlineObject2",
         }
-        response_data = await self.api_client.call_api(
+        response_data = self.api_client.call_api(
             *_param,
             _request_timeout=_request_timeout
         )

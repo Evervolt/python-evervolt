@@ -44,14 +44,14 @@ configuration.api_key['ApiKey'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with evervolt.ApiClient(configuration) as api_client:
+with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = evervolt.DevicesApi(api_client)
     devices_delete_request = evervolt.DevicesDeleteRequest() # DevicesDeleteRequest |  (optional)
 
     try:
         # Delete device
-        await api_instance.devices_delete(devices_delete_request=devices_delete_request)
+        api_instance.devices_delete(devices_delete_request=devices_delete_request)
     except Exception as e:
         print("Exception when calling DevicesApi->devices_delete: %s\n" % e)
 ```
@@ -121,13 +121,13 @@ configuration.api_key['ApiKey'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with evervolt.ApiClient(configuration) as api_client:
+with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = evervolt.DevicesApi(api_client)
 
     try:
         # Get devices
-        api_response = await api_instance.devices_get()
+        api_response = api_instance.devices_get()
         print("The response of DevicesApi->devices_get:\n")
         pprint(api_response)
     except Exception as e:
@@ -196,14 +196,14 @@ configuration.api_key['ApiKey'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with evervolt.ApiClient(configuration) as api_client:
+with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = evervolt.DevicesApi(api_client)
     devices_post_request = evervolt.DevicesPostRequest() # DevicesPostRequest |  (optional)
 
     try:
         # Add device
-        await api_instance.devices_post(devices_post_request=devices_post_request)
+        api_instance.devices_post(devices_post_request=devices_post_request)
     except Exception as e:
         print("Exception when calling DevicesApi->devices_post: %s\n" % e)
 ```

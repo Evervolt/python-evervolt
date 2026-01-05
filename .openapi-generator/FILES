@@ -15,8 +15,10 @@ docs/InlineObject.md
 docs/InlineObject1.md
 docs/InlineObject1Inner.md
 docs/InlineObject2.md
+docs/InlineObject3Inner.md
 docs/PricesApi.md
 docs/Providers.md
+docs/ProvidersApi.md
 docs/ScheduleSlot.md
 docs/UsageProfileInner.md
 evervolt/__init__.py
@@ -24,6 +26,7 @@ evervolt/api/__init__.py
 evervolt/api/customer_api.py
 evervolt/api/devices_api.py
 evervolt/api/prices_api.py
+evervolt/api/providers_api.py
 evervolt/api_client.py
 evervolt/api_response.py
 evervolt/configuration.py
@@ -39,6 +42,7 @@ evervolt/models/inline_object.py
 evervolt/models/inline_object1.py
 evervolt/models/inline_object1_inner.py
 evervolt/models/inline_object2.py
+evervolt/models/inline_object3_inner.py
 evervolt/models/providers.py
 evervolt/models/schedule_slot.py
 evervolt/models/usage_profile_inner.py

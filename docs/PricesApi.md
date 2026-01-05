@@ -45,14 +45,14 @@ configuration.api_key['ApiKey'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with evervolt.ApiClient(configuration) as api_client:
+with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = evervolt.PricesApi(api_client)
     energy_prices_post_request = evervolt.EnergyPricesPostRequest() # EnergyPricesPostRequest |  (optional)
 
     try:
         # Electricity prices
-        api_response = await api_instance.energy_prices_post(energy_prices_post_request=energy_prices_post_request)
+        api_response = api_instance.energy_prices_post(energy_prices_post_request=energy_prices_post_request)
         print("The response of PricesApi->energy_prices_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -126,14 +126,14 @@ configuration.api_key['ApiKey'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with evervolt.ApiClient(configuration) as api_client:
+with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = evervolt.PricesApi(api_client)
     energy_schedule_post_request = evervolt.EnergySchedulePostRequest() # EnergySchedulePostRequest |  (optional)
 
     try:
         # Optimal schedule
-        api_response = await api_instance.energy_schedule_post(energy_schedule_post_request=energy_schedule_post_request)
+        api_response = api_instance.energy_schedule_post(energy_schedule_post_request=energy_schedule_post_request)
         print("The response of PricesApi->energy_schedule_post:\n")
         pprint(api_response)
     except Exception as e:
@@ -206,14 +206,14 @@ configuration.api_key['ApiKey'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-async with evervolt.ApiClient(configuration) as api_client:
+with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = evervolt.PricesApi(api_client)
     energy_starttime_post_request = evervolt.EnergyStarttimePostRequest() # EnergyStarttimePostRequest |  (optional)
 
     try:
         # Optimal start time
-        api_response = await api_instance.energy_starttime_post(energy_starttime_post_request=energy_starttime_post_request)
+        api_response = api_instance.energy_starttime_post(energy_starttime_post_request=energy_starttime_post_request)
         print("The response of PricesApi->energy_starttime_post:\n")
         pprint(api_response)
     except Exception as e:

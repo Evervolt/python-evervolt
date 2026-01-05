@@ -1,18 +1,18 @@
-# evervolt.CustomerApi
+# evervolt.ProvidersApi
 
 All URIs are relative to *https://api.evervolt.nl*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**customer_get**](CustomerApi.md#customer_get) | **GET** /customer | Get customer
+[**providers_get**](ProvidersApi.md#providers_get) | **GET** /providers | Get providers
 
 
-# **customer_get**
-> InlineObject customer_get()
+# **providers_get**
+> List[InlineObject3Inner] providers_get()
 
-Get customer
+Get providers
 
-This endpoint is used to get information about the customer
+This endpoint is used to list all supported providers
 
 ### Example
 
@@ -20,7 +20,7 @@ This endpoint is used to get information about the customer
 
 ```python
 import evervolt
-from evervolt.models.inline_object import InlineObject
+from evervolt.models.inline_object3_inner import InlineObject3Inner
 from evervolt.rest import ApiException
 from pprint import pprint
 
@@ -44,15 +44,15 @@ configuration.api_key['ApiKey'] = os.environ["API_KEY"]
 # Enter a context with an instance of the API client
 with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = evervolt.CustomerApi(api_client)
+    api_instance = evervolt.ProvidersApi(api_client)
 
     try:
-        # Get customer
-        api_response = api_instance.customer_get()
-        print("The response of CustomerApi->customer_get:\n")
+        # Get providers
+        api_response = api_instance.providers_get()
+        print("The response of ProvidersApi->providers_get:\n")
         pprint(api_response)
     except Exception as e:
-        print("Exception when calling CustomerApi->customer_get: %s\n" % e)
+        print("Exception when calling ProvidersApi->providers_get: %s\n" % e)
 ```
 
 
@@ -63,7 +63,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**InlineObject**](InlineObject.md)
+[**List[InlineObject3Inner]**](InlineObject3Inner.md)
 
 ### Authorization
 
@@ -78,7 +78,7 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | Successfully retrieved customer |  -  |
+**200** | Successfully retrieved providers |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
