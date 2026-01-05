@@ -42,13 +42,13 @@ configuration.api_key['ApiKey'] = os.environ["API_KEY"]
 # configuration.api_key_prefix['ApiKey'] = 'Bearer'
 
 # Enter a context with an instance of the API client
-with evervolt.ApiClient(configuration) as api_client:
+async with evervolt.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = evervolt.CustomerApi(api_client)
 
     try:
         # Get customer
-        api_response = api_instance.customer_get()
+        api_response = await api_instance.customer_get()
         print("The response of CustomerApi->customer_get:\n")
         pprint(api_response)
     except Exception as e:
