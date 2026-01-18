@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** | Successfully retrieved electricity prices |  -  |
-**404** | Electricity prices could not be found due to one of the following reasons: - The given provider does not exist ([See all supported providers](/docs/category/aanbieders)) - No market price data is available for (part of) the requested range - No purchasing fee data is available for (part of) the requested range - No tax data is available for (part of) the requested range - No vat data is available for (part of) the requested range  The response body will contain more information on the exact reason  |  -  |
+**404** | Electricity prices could not be found due to one of the following reasons: - The given provider does not exist ([See all supported providers](/docs/category/providers)) - No market price data is available for (part of) the requested range - No purchasing fee data is available for (part of) the requested range - No tax data is available for (part of) the requested range - No vat data is available for (part of) the requested range  The response body will contain more information on the exact reason  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

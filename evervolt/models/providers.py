@@ -20,14 +20,23 @@ from typing_extensions import Self
 
 class Providers(str, Enum):
     """
-    [See all supported providers](/docs/category/aanbieders)
+    [See all supported providers](/docs/category/providers)
     """
 
     """
     allowed enum values
     """
+    MARKET = 'market'
     ZONNEPLAN = 'zonneplan'
     FRANKENERGIE = 'frankenergie'
+    TIBBER = 'tibber'
+    ANWBENERGIE = 'anwbenergie'
+    ENERGYZERO = 'energyzero'
+    PUREENERGIE = 'pureenergie'
+    ESSENT = 'essent'
+    VANDEBRON = 'vandebron'
+    VATTENFALL = 'vattenfall'
+    ENECO = 'eneco'
 
     @classmethod
     def from_json(cls, json_str: str) -> Self:
